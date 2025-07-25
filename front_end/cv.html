@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Writing - TRACEATALENT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      background: url('images/cv-cover.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .navbar {
+      background-color: rgb(245, 245, 245);
+    }
+
+    .navbar-brand {
+      color: red;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: #000;
+    }
+
+    .nav-link:hover {
+      color: red;
+    }
+
+    .dropdown-menu .dropdown-item.styled-dropdown {
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu .dropdown-item.styled-dropdown:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .main-section {
+      padding: 100px 15px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .cv-card {
+      background-color: white;
+      color: #000;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .cv-card h2 {
+      color: red;
+      font-weight: bold;
+    }
+
+    .btn-upload {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-upload:hover {
+      background-color: darkred;
+    }
+
+    textarea.form-control,
+    input.form-control {
+      border-radius: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    #responseMsg {
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm px-4">
+  <a class="navbar-brand" href="#">TRACEATALENT</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="btn btn-danger dropdown-toggle text-white" href="#" id="dashboardDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dashboardDropdown">
+          <li><a class="dropdown-item styled-dropdown" href="#">Create CV</a></li>
+          <li><a class="dropdown-item styled-dropdown" href="#">Log Out</a></li>
+          <li><a class="dropdown-item styled-dropdown" href="#">Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<section class="cv-section py-4 mt-5">
+  <div class="container py-4">
+    <div class="row g-4 align-items-stretch justify-content-center">
+
+      <!-- Left Card: Image + Text -->
+      <div class="col-lg-6">
+        <div class="card rounded-4 shadow h-100 overflow-hidden">
+          <div style="height: 400px; overflow-y: auto;">
+            <img src="images/CV_ramp2.jpg" alt="CV Preview" class="w-100" style="display: block; object-fit: cover;">
+          </div>
+          <div class="text-center px-3 py-3 bg-white">
+            <h5 class="text-danger fw-bold mb-2" style="font-size: 1.2rem;">
+              Stand Out with a Professional CV
+            </h5>
+            <p class="mb-0" style="font-size: 1rem;">
+              A well-designed CV sets you apart in the job market. Let us help you craft a powerful first impression and unlock career opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Card: Upload Form -->
+      <div class="col-lg-6">
+        <div class="card rounded-4 shadow p-4 h-100">
+          <h2 class="text-danger fw-bold mb-3">Professional CV Writing</h2>
+          <p>Let me revamp your CV professionally for just <strong>R100</strong>. Here's how it works:</p>
+          <ol class="mb-4">
+            <li>Upload your old CV <strong>or</strong></li>
+            <li>Type in your rough details in the box provided</li>
+            <li>I will edit, structure, and send your CV professionally</li>
+          </ol>
+
+          <!-- Upload Form -->
+<h2 class="mt-4 text-danger">Submit Your CV</h2>
+<form id="cvForm" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="details" class="form-label">Your Details</label>
+    <textarea class="form-control" id="details" name="details" rows="4" required placeholder="Type your rough CV details here..."></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="cvFile" class="form-label">Upload Old CV (PDF/DOC)</label>
+    <input type="file" class="form-control" id="cvFile" name="cvFile" accept=".pdf,.doc,.docx" required>
+  </div>
+
+  <button type="submit" class="btn btn-danger w-100 fw-bold">Submit</button>
+</form>
+
+<!-- Upload Response Message -->
+<div id="responseMsg" class="mt-3 text-success fw-bold"></div>
+
+<!-- Download Button (hidden by default) -->
+<div id="downloadSection" class="mt-3" style="display: none;">
+  <a id="downloadLink" href="#" class="btn btn-outline-success w-100 fw-bold" download>Download Your Uploaded CV</a>
+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 TRACEATALENT. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.getElementById("cvForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("details", document.getElementById("details").value);
+    formData.append("cvFile", document.getElementById("cvFile").files[0]);
+    console.log(formData);
+    
+
+    fetch("http://localhost:3000/api/cv/upload", {
+  method: "POST",
+  body: formData,
+})
+  .then((res) => res.json())
+  .then((data) => {
+    if (data.message === "CV uploaded successfully!" && data.filename) {
+      const msg = document.getElementById("responseMsg");
+      msg.innerText = data.message;
+      msg.style.color = "green";
+
+      // Show download link
+      const downloadLink = document.createElement("a");
+      downloadLink.href = `http://localhost:3000/uploads/${data.filename}`;
+      downloadLink.download = data.filename;
+      downloadLink.innerText = "Download your uploaded CV";
+      downloadLink.className = "btn btn-success mt-2 d-block";
+
+      msg.appendChild(document.createElement("br"));
+      msg.appendChild(downloadLink);
+    } else {
+      throw new Error("Upload failed");
+    }
+  })
+  .catch((error) => {
+    const msg = document.getElementById("responseMsg");
+    msg.innerText = "Upload failed. Please try again.";
+    msg.style.color = "red";
+    console.error("Upload error:", error);
+  });
+  });
+</script>
+
+</body>
+</html>

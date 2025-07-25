@@ -1,0 +1,130 @@
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: red;
+  letter-spacing: 1px;
+}
+
+section {
+  padding-top: 80px;
+  scroll-margin-top: 80px;
+}
+
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+nav.navbar {
+  background-color:rgb(245, 245, 245);
+  padding: 15px 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #000 ;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: red ;
+}
+
+/* Dropdown items styled as buttons with hover red */
+.dropdown-menu .dropdown-item.styled-dropdown {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item.styled-dropdown:hover {
+  background-color: red;
+  color: white;
+}
+
+
+
+    .home-custom {
+background: url('images/cover.jpg') no-repeat center center;
+background-attachment: scroll;
+  background-size: cover;
+  padding: 120px 20px 100px;
+  position: relative;
+}
+
+.home-overlay {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.home-overlay ul li {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+    .btn-explore {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    
+   .services {
+ background: url('images/cover.jpg') no-repeat center center;
+background-attachment: scroll;
+      background-size: cover;
+      color: #000;
+    }
+    .service-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .service-card-body {
+      padding: 20px;
+    }
+    
+    #contact {
+      background-color: #000;
+      color: white;
+      padding: 60px 20px;
+    }
+    footer {
+      background-color: red;
+      color: white;
+    }
+ 
+
+  
