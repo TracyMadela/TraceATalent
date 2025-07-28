@@ -43,6 +43,9 @@ COMMIT;
 --
 CREATE TABLE `cv_submissions` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100),
+  `email` VARCHAR(100),
+  `phone` VARCHAR(20),
   `filename` VARCHAR(255) NOT NULL,
   `filepath` VARCHAR(255) NOT NULL,
   `extension` VARCHAR(10),
