@@ -52,6 +52,18 @@ CREATE TABLE `cv_submissions` (
   `details` TEXT,
   `submitted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+--
+-- Table structure for table `cv_submissions`
+--
+CREATE TABLE logo_requests (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `clientName` VARCHAR(100) NOT NULL,
+  `clientEmail` VARCHAR(150) NOT NULL,
+  `brandName` VARCHAR(150) NOT NULL,
+  `details` TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
